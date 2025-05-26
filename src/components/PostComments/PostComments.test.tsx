@@ -4,7 +4,7 @@ import PostComment from '.';
 
 describe('Testes do PostComments', () => {
   it('Adiciona 2 comentários', () => {
-    render(<Post />);  // Use o componente com o nome correto
+    render(<Post />);
     const input = screen.getByTestId('comment-input');
     const button = screen.getByTestId('submit-button');
 
