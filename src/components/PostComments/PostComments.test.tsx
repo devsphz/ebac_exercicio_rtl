@@ -7,13 +7,11 @@ describe('Testes do PostComments', () => {
     const input = screen.getByTestId('comment-input');
     const button = screen.getByTestId('submit-button');
 
-    // Primeiro comentário
     fireEvent.change(input, { target: { value: 'Comentário 1' } });
-    fireEvent.click(button);
+    fireEvent.click(button); // primeiro comentário
 
-    // Segundo comentário
     fireEvent.change(input, { target: { value: 'Comentário 2' } });
-    fireEvent.click(button);
+    fireEvent.click(button); // segundo comentário
 
     expect(screen.getByText('Comentário 1')).toBeInTheDocument();
     expect(screen.getByText('Comentário 2')).toBeInTheDocument();
